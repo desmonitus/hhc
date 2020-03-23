@@ -1,0 +1,46 @@
+module.exports = function(param){
+    const menu = [];
+    var data = new Object();
+    data.id = 1;
+    data.type = 'main';
+    data.menu = 'แฟ้มข้อมูล';
+    data.path = '';
+    data.icon = '';
+    data.attr = '';
+    menu.push(data);
+    data = new Object();
+    data.id = 2;
+    data.type = 'list';
+    data.menu = 'Dashboard';
+    data.path = '/';
+    data.icon = 'assessment';
+    data.attr = '';
+    menu.push(data);
+    data = new Object();
+    data.id = 3;
+    data.type = 'main';
+    data.menu = 'ตั้งค่า';
+    data.path = '';
+    data.attr = '';
+    data.icon = '';
+    menu.push(data);
+    data = new Object();
+    data.id = 4;
+    data.type = 'list';
+    data.menu = 'กำหนดข้อมูลทั่วไป';
+    data.path = '.setting';
+    data.icon = 'settings_applications';
+    data.attr = 'data-toggle=collapse role=button aria-expanded=false aria-controls='+data.path;
+    menu.push(data);
+    data = new Object();
+    data.id = 5;
+    data.type = 'list';
+    data.menu = 'ผู้ใช้งาน';
+    data.path = '/user';
+    data.icon = '';
+    data.attr = '';
+    data.child_id = 'setting';
+    menu.push(data);
+    return menu;
+
+}
